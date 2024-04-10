@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+
+    <body>
+
+        <h1>Chat Application with WebRTC</h1>
+
+        <div id="videos" class="videoPlayers">
+            <video id="localVideo" autoplay muted controls playsinline></video>
+            <video id="remoteVideo" autoplay controls playsinline></video>
+        </div>
+
+        <div>
+            <button id="startLocalStreamButton"> 
+                Start Local Stream
+            </button>
+            <button id="startRemoteConnectionButton" disabled> 
+                Start/Join Remote Connection
+            </button>
+            <button id="endStreamButton" disabled> 
+                End Call 
+            </button>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/client.js"></script>
+    </body>
+</html>
